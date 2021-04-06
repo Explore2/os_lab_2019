@@ -135,7 +135,6 @@ int main(int argc, char **argv) {
         else 
         {
             write(pipefd[1], &min_max, sizeof(struct MinMax));
-            // close (pipefd[1]);
         }
         return 0;
       }
