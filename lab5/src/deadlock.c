@@ -10,15 +10,15 @@ void *proccess1(){
 
       pthread_mutex_lock(&lock1);
 
-      printf("Начало работы poccess1\n");
+      printf("Proccess1 starts\n");
       sleep(2);
 
-      printf("Попытка захватить ресурсы proccess2\n");
+      printf("trying to get proccess2 resources\n");
       pthread_mutex_lock(&lock2);
-      printf("Захват ресурсов proccess2\n");
+      printf("Getting proccess2 recources\n");
       pthread_mutex_unlock(&lock2);
 
-      printf("Окончание работы proccess1\n");
+      printf("Proccess1 stops\n");
 
       pthread_mutex_unlock(&lock1);
 
@@ -30,15 +30,15 @@ void *proccess2(){
 
       pthread_mutex_lock(&lock2);
 
-      printf("Начало работы proccess2\n");
+      printf("Proccess2 starts\n");
       sleep(2);
 
-      printf("Попытка захватить ресурсы proccess1\n");
+      printf("trying to get proccess1 resources\n");
       pthread_mutex_lock(&lock1);
-      printf("Захват ресурсов proccess1\n");
+      printf("Getting proccess1 recources\n");
       pthread_mutex_unlock(&lock1);
 
-      printf("Окончание работы proccess2..\n");
+      printf("Proccess2 stop\n");
 
       pthread_mutex_unlock(&lock2);
 
