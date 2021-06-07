@@ -30,18 +30,6 @@ struct ThreadArgs{
 int result = 1;
 pthread_mutex_t mut = PTHREAD_MUTEX_INITIALIZER;
 
-// uint64_t MultModulo(uint64_t a, uint64_t b, uint64_t mod) {
-//   uint64_t result = 0;
-//   a = a % mod;
-//   while (b > 0) {
-//     if (b % 2 == 1)
-//       result = (result + a) % mod;
-//     a = (a * 2) % mod;
-//     b /= 2;
-//   }
-
-//   return result % mod;
-// }
 
 bool ConvertStringToUI64(const char *str, uint64_t *val) {
   char *end = NULL;
@@ -222,6 +210,7 @@ int main(int argc, char **argv) {
    for (; i < servers_num; i++) {
     pthread_join(threads[i], NULL);
   }
+
 
   printf("\nResult: %d\n", result);
 

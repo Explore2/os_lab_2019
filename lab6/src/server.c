@@ -21,12 +21,6 @@ struct FactorialArgs {
 };
 
 
-
-
-
-
-
-
 uint64_t Factorial(const struct FactorialArgs *args) {
   uint64_t ans = 1;
   uint64_t i = (*args).begin;

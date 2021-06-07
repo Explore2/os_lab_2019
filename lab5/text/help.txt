@@ -1,11 +1,9 @@
 gcc -pthread -c mutex.c
-gcc -pthread mutex.o -o mutex
+
 ./mutex
 
-gcc -pthread -c fact.c
-gcc -pthread fact.o -o fact 
-./fact --k 5 --pnum=4 --mod=10
+./mutex_fixed
 
-gcc -pthread -c dead.c
-gcc -pthread dead.o -o dead
-./dead 
+./factorial --k 5 --pnum=4 --mod=10
+
+./deadlock
